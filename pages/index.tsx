@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Navigation from "../src/component/layout/navigation/navigation";
+import Banner from "../src/component/layout/banner/banner";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navigation />
+      <Banner />
     </>
   );
 }

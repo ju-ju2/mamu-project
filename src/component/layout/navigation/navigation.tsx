@@ -11,17 +11,25 @@ import {
 
 export default function Navigation() {
   const [isLogin, setIsLogin] = useRecoilState(isLoginState);
+  const onClickLogin = () => {
+    setIsLogin((prev) => !prev);
+  };
   return (
     <Wrapper>
       <Title>mamu</Title>
       <LoginWrapper>
         {isLogin ? (
           <>
-            <UserName>한주연님</UserName>
             <Avvvatars style="shape" value="hanju" />
+            <UserName>한주연님</UserName>
+            <MyLogin type="primary" onClick={onClickLogin}>
+              로그아웃
+            </MyLogin>
           </>
         ) : (
-          <MyLogin type="primary">로그인</MyLogin>
+          <MyLogin type="primary" onClick={onClickLogin}>
+            로그인
+          </MyLogin>
         )}
       </LoginWrapper>
     </Wrapper>
