@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import { Button } from "antd";
 
 export const Wrapper = styled.div`
   width: 100vw;
@@ -29,12 +28,18 @@ export const LoginWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
 `;
-export const MyLogin = styled(Button)`
-  background-color: #ff6000;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+export const MyLogin = styled.button`
+  width: auto;
+  height: 30px;
+  padding: 0 1.2rem;
+  color: white;
+  background: #ff6000;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+  :hover {
+    background-color: black;
+  }
 `;
 export const UserName = styled.div`
   /* text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5); */
