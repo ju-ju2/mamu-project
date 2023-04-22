@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Banner from "../src/components/commons/layout/banner/banner";
-import MainPage from "../src/components/units/main/main.container";
 import Header from "../src/components/commons/layout/header/header.container";
+import BoardListPage from "../src/components/units/boards/list/list.container";
 
 export default function Home() {
   return (
@@ -14,7 +14,7 @@ export default function Home() {
       </Head>
       <Header />
       <Banner />
-      <MainPage />
+      <BoardListPage />
     </>
   );
 }
