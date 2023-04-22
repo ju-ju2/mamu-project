@@ -38,25 +38,13 @@ export const MySearchIcon = styled(SearchOutlined)`
   color: #454545;
   cursor: pointer;
 `;
-export const UploadButton = styled.button`
-  width: auto;
-  height: 36px;
-  padding: 0 1.5rem;
-  color: white;
-  background: #ff6000;
-  border-radius: 15px;
-  border: none;
-  cursor: pointer;
-  :hover {
-    background-color: black;
-  }
-`;
+
 export const ContentsContainer = styled.div`
   width: 80vw;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   margin: 30px 0;
 `;

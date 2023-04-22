@@ -14,44 +14,11 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
 `;
-export const Title = styled.div`
-  font-size: 24px;
-  font-family: mainTitle;
-  text-align: center;
-  color: #717171;
-  margin-bottom: 20px;
-  cursor: pointer;
+export const GapBox = styled.div`
+  width: 400px;
+  height: 20px;
 `;
 
-export const Input = styled.input`
-  width: 400px;
-  height: 44px;
-  outline: none;
-  border: none;
-  border-radius: 15px;
-  border: 1px solid #454545;
-  color: #454545;
-  padding: 0 15px;
-  margin-bottom: 15px;
-`;
-export const SignupButton = styled.button`
-  width: 400px;
-  height: 44px;
-  border-radius: 15px;
-  background-color: #ff6000;
-  border: none;
-  color: #ffffff;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 0 15px;
-  margin-top: 50px;
-  cursor: pointer;
-  :hover {
-    background-color: black;
-  }
-`;
 export const InputTitle = styled.div`
   width: 95%;
   font-size: 12px;

@@ -27,15 +27,6 @@ export const Wrapper = styled.div`
   opacity: ${(props) => (props.visible ? 0 : 1)}; */
 `;
 
-export const Title = styled.div`
-  font-size: 24px;
-  font-family: "mainTitle";
-  /* color: ${(props) => (props.position ? "#717171" : "white")}; */
-  color: #717171;
-
-  cursor: pointer;
-`;
-
 export const LoginWrapper = styled.div`
   display: flex;
   flex-direction: row;

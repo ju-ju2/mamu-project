@@ -1,11 +1,7 @@
 import Avvvatars from "avvvatars-react";
-import {
-  LoginWrapper,
-  MyLogin,
-  Title,
-  UserName,
-  Wrapper,
-} from "./header.style";
+import { LoginWrapper, UserName, Wrapper } from "./header.style";
+import NarrowButton from "../../../../commons/button/01.orange/narrow";
+import Logo from "../../../../commons/logo/01.gray";
 
 interface IHeaderUIProps {
   onClickGotoHome: () => void;
@@ -19,16 +15,16 @@ export default function HeaderUI(props: IHeaderUIProps) {
     // <Wrapper position={position} visible={visible}>
     //   <Title position={position} onClick={onClickGotoHome}>
     <Wrapper>
-      <Title onClick={props.onClickGotoHome}>mamu</Title>
+      <Logo />
       <LoginWrapper>
         {props.isLogin ? (
           <>
             <Avvvatars style="shape" value="hanju" />
             <UserName>한주연님</UserName>
-            <MyLogin onClick={props.onClickLogout}>로그아웃</MyLogin>
+            <NarrowButton onClick={props.onClickLogout} title="로그아웃" />
           </>
         ) : (
-          <MyLogin onClick={props.onClickGoToLogin}>로그인</MyLogin>
+          <NarrowButton onClick={props.onClickGoToLogin} title="로그인" />
         )}
       </LoginWrapper>
     </Wrapper>
