@@ -4,6 +4,8 @@ import { isLoginState } from "../../../../commons/store";
 import { useRouter } from "next/router";
 import { Modal } from "antd";
 import HeaderUI from "./header.presenter";
+import { useEffect, useState } from "react";
+import { useMediaQuery } from "@react-hook/media-query";
 
 export default function Header() {
   const router = useRouter();
@@ -14,7 +16,7 @@ export default function Header() {
   };
   const onClickLogout = () => {
     setIsLogin((prev) => !prev);
-    Modal.info({
+    Modal.success({
       content: "로그아웃 완료",
       okButtonProps: { style: { backgroundColor: "#FF6000" } },
     });
@@ -23,6 +25,15 @@ export default function Header() {
   const onClickGotoHome = () => {
     router.push("/");
   };
+  const [isMobile, setIsMobile] = useState(false);
+
+  // SSR 문제 해결을 위한 로직
+  const screen = useMediaQuery("(min-width: 660px)");
+  useEffect(() => {
+    if (screen) {
+      setIsMobile(true);
+    } else setIsMobile(false);
+  }, [screen]);
 
   // const [position, setPosition] = useState(0);
   // const [visible, setVisible] = useState(false);
@@ -47,6 +58,7 @@ export default function Header() {
       onClickLogout={onClickLogout}
       onClickGotoHome={onClickGotoHome}
       isLogin={isLogin}
+      isMobile={isMobile}
     />
   );
 }

@@ -8,7 +8,7 @@ import Logo from "../../../commons/logo/01.gray";
 export default function SignupPage() {
   const router = useRouter();
   const onClickSignup = () => {
-    Modal.info({
+    Modal.success({
       content: "회원가입이 완료되었습니다.",
       okButtonProps: { style: { backgroundColor: "#FF6000" } },
     });

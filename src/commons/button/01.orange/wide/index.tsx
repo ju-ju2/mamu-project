@@ -3,7 +3,7 @@ interface IbuttonProps {
   fill: boolean;
 }
 export const CustomButton = styled.button<IbuttonProps>`
-  width: 400px;
+  width: 100%;
   height: 44px;
   border-radius: 15px;
   background-color: ${(props) => (props.fill ? "#ff6000" : "white")};

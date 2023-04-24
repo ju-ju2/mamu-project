@@ -3,6 +3,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styled from "@emotion/styled";
 import * as S from "./banner.styles";
+import NarrowButton from "../../../../commons/button/01.orange/narrow";
+import { useRouter } from "next/router";
 
 export default function Banner() {
   const settings = {
@@ -28,6 +30,10 @@ export default function Banner() {
     ),
     dotsClass: "dots_custom",
   };
+  const router = useRouter();
+  const onClickButton = () => {
+    router.push("/boards/new");
+  };
   return (
     <S.Wrapper>
       <Slider {...settings}>
@@ -36,6 +42,7 @@ export default function Banner() {
             <S.BannerTitleWrapper>
               <S.SubTitle>작품이 되다,</S.SubTitle>
               <S.Title>mamu</S.Title>
+              <NarrowButton title="+작품등록하기" onClick={onClickButton} />
             </S.BannerTitleWrapper>
           </S.BackgroundDiv>
         </div>

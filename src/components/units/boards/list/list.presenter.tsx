@@ -1,19 +1,19 @@
 import { Tag } from "antd";
 import * as S from "./list.styles";
 import Search from "../../../../commons/search/01.gray";
-import NarrowButton from "../../../../commons/button/01.orange/narrow";
-interface IMainPageUIProps {
-  onClickUpload: () => void;
-  isScreen: boolean;
-}
-export default function BoardListPageUI(props: IMainPageUIProps) {
+// import NarrowButton from "../../../../commons/button/01.orange/narrow";
+// interface IMainPageUIProps {
+//   onClickUpload: () => void;
+//   isScreen: boolean;
+// }
+export default function BoardListPageUI() {
   return (
     <S.Container>
       <S.HeadWrapper>
         <Search placeholder="검색어를 입력하세요" />
-        {props.isScreen && (
+        {/* {props.isScreen && (
           <NarrowButton onClick={props.onClickUpload} title="+작품 등록하기" />
-        )}
+        )} */}
       </S.HeadWrapper>
       <S.ContentsContainer>
         {new Array(15).fill(1).map((el, index) => (

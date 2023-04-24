@@ -8,19 +8,27 @@ interface WrapperProps {
   visible: boolean;
   position: number;
 }
+export const Container = styled.div`
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+`;
 
 export const Wrapper = styled.div`
-  width: 100vw;
+  width: 100%;
   height: 60px;
   padding: 0 30px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 100;
+
   background-color: white;
   /* background-color: ${(props) =>
     props.visible || props.position === 0 ? "transparent" : "#ffffff"};
@@ -33,27 +41,14 @@ export const LoginWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
 `;
-export const MyLogin = styled.button`
-  width: auto;
-  height: 30px;
-  padding: 0 1.2rem;
-  color: white;
-  background: #ff6000;
-  border-radius: 15px;
-  border: none;
-  cursor: pointer;
 
-  :hover {
-    background-color: black;
-  }
-`;
 export const UserName = styled.div`
-  /* text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5); */
-  margin-left: 1rem;
-  margin-right: 1rem;
-  /* color: ${(props) => (props.position ? "#717171" : "white")}; */
+  width: auto;
+  margin: 0 1rem;
   color: #717171;
 `;
-export const MyModal = styled(Modal)`
-  background-color: #ff6000;
+
+export const Border = styled.div`
+  width: 100%;
+  border-bottom: 1px solid #222222;
 `;

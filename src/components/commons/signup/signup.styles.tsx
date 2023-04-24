@@ -13,6 +13,9 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @media (max-width: 500px) {
+    width: 80%;
+  }
 `;
 export const GapBox = styled.div`
   width: 400px;

@@ -1,7 +1,7 @@
 import { StarFilled } from "@ant-design/icons";
 import styled from "@emotion/styled";
 export const Container = styled.div`
-  width: 100%;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,26 +13,41 @@ export const HeadWrapper = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  padding: 0 0.7rem;
+
   /* margin: 30px 0; */
+  @media (min-width: 1800px) {
+    width: 1800px;
+    height: 8vh;
+  }
 `;
 export const ContentsContainer = styled.div`
+  width: 80vw;
+  @media (min-width: 1800px) {
+    width: 1800px;
+  }
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   margin: 30px 0;
 `;
 export const ContentsWrapper = styled.div`
+  width: 265px;
+  height: auto;
   display: flex;
   flex-direction: column;
   margin-bottom: 2rem;
   margin: 0.7rem;
+  @media (max-width: 500px) {
+    width: 100vw;
+  }
 `;
 export const Image = styled.img`
-  width: 265px;
+  width: 100%;
   height: 256px;
-  position: relative;
+  object-fit: cover;
   border-radius: 15px;
   margin-bottom: 0.5rem;
 `;

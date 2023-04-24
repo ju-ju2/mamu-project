@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { ChangeEvent } from "react";
 
 export const Input = styled.input`
-  width: 400px;
+  width: 100%;
   height: 44px;
   outline: none;
   border: none;

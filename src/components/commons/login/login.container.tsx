@@ -11,7 +11,7 @@ export default function LoginPage() {
   const [isLogin, setIsLogin] = useRecoilState(isLoginState);
 
   const onClickLogin = () => {
-    Modal.info({
+    Modal.success({
       content: "로그인이 완료되었습니다.",
       okButtonProps: { style: { backgroundColor: "#FF6000" } },
     });

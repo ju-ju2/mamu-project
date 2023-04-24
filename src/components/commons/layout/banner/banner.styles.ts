@@ -48,6 +48,9 @@ export const BackgroundDiv = styled.div`
   background-size: cover;
   font-size: 30px;
   color: white;
+  @media (min-width: 1800px) {
+    height: 92vh;
+  }
 `;
 
 export const BannerTitleWrapper = styled.div`
@@ -70,6 +73,7 @@ export const Title = styled.div`
   color: white;
   text-shadow: 4px 4px 3px rgba(0, 0, 0, 0.3);
   line-height: 5rem;
+  margin-bottom: 50px;
   @media (max-width: 500px) {
     font-size: 3rem;
     line-height: 3rem;
