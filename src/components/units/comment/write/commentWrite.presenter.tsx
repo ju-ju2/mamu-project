@@ -17,8 +17,12 @@ export default function CommentWriteUIPage(props: ICommentWriteUIPageProps) {
   return (
     <S.CommentWrapper>
       <S.InfoWrapper>
-        비밀번호 : <S.Password placeholder="비밀번호" type="password" />
-        평점 : <S.MyRate tooltips={desc} onChange={setValue} value={value} />
+        <S.InfoLowWrapper>
+          비밀번호 : <S.Password placeholder="비밀번호" type="password" />
+        </S.InfoLowWrapper>
+        <S.InfoLowWrapper>
+          평점 : <S.MyRate tooltips={desc} onChange={setValue} value={value} />
+        </S.InfoLowWrapper>
       </S.InfoWrapper>
       <S.Comment
         maxLength={100}

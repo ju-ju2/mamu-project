@@ -1,6 +1,6 @@
 import { Modal } from "antd";
-import BoardDetailPagePCUI from "./detail.pc.presenter";
 import { MouseEvent, useRef, useState } from "react";
+import BoardDetailPCPageUI from "./detail.pc.presenter";
 
 export default function BoardDetailPCPage() {
   const [selectImg, setSelectImg] = useState("/img/shoneyArt.png");
@@ -31,7 +31,7 @@ export default function BoardDetailPCPage() {
     setIsDetail(false);
   };
   return (
-    <BoardDetailPagePCUI
+    <BoardDetailPCPageUI
       selectImg={selectImg}
       isDetail={isDetail}
       imgRef={imgRef}

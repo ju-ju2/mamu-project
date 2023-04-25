@@ -7,6 +7,9 @@ export const CommentWrapper = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  @media (max-width: 768px) {
+    width: 92%;
+  }
 `;
 export const InfoWrapper = styled.div`
   width: 100%;
@@ -14,6 +17,15 @@ export const InfoWrapper = styled.div`
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  margin-bottom: 15px;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+`;
+export const InfoLowWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
   margin-bottom: 15px;
 `;
 export const Password = styled.input`
@@ -25,6 +37,9 @@ export const Password = styled.input`
   padding: 0 10px;
   ::placeholder {
     color: #d9d9d9;
+  }
+  @media (max-width: 768px) {
+    width: 100px;
   }
 `;
 export const MyRate = styled(Rate)`
@@ -39,6 +54,9 @@ export const Comment = styled.textarea`
   outline: none;
   ::placeholder {
     color: #d9d9d9;
+  }
+  @media (max-width: 768px) {
+    height: 150px;
   }
 `;
 export const UploadWrapper = styled.div`

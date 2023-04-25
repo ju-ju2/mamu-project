@@ -5,7 +5,7 @@ import CommentListPage from "../../../comment/list/commentList.container";
 import CommentWritePage from "../../../comment/write/commentWrite.container";
 import CommentRateAverage from "../../../comment/average/comment.average";
 
-interface IBoardDetailPagePCUIProps {
+interface IBoardDetailPCPageUIProps {
   selectImg: string;
   isDetail: boolean;
   imgRef: RefObject<HTMLImageElement>;
@@ -16,7 +16,7 @@ interface IBoardDetailPagePCUIProps {
   onClickArtReview: () => void;
 }
 
-export default function BoardDetailPagePCUI(props: IBoardDetailPagePCUIProps) {
+export default function BoardDetailPCPageUI(props: IBoardDetailPCPageUIProps) {
   return (
     <>
       <Header />
@@ -65,39 +65,6 @@ export default function BoardDetailPagePCUI(props: IBoardDetailPagePCUIProps) {
             />
           </S.SubImageWrapper>
         </S.UpperWrapper>
-        <S.LowerWrapper>
-          <S.PickInfoWrapper>
-            <S.PickInfoTitle
-              onClick={props.onClickArtDetail}
-              isDetail={props.isDetail}
-            >
-              작품정보
-            </S.PickInfoTitle>
-            <S.PickInfoTitle
-              onClick={props.onClickArtReview}
-              isDetail={!props.isDetail}
-            >
-              댓글
-            </S.PickInfoTitle>
-          </S.PickInfoWrapper>
-          <S.BorderWrapper>
-            <S.PickBorder isDetail={props.isDetail}></S.PickBorder>
-            <S.PickBorder isDetail={!props.isDetail}></S.PickBorder>
-            <S.Border></S.Border>
-          </S.BorderWrapper>
-          {props.isDetail ? (
-            <S.ArtDetailScript>
-              제품의 상세 설명란입니다. 제품의 상세 설명란입니다. 제품의 상세
-              설명란입니다. 제품의 상세 설명란입니다. 제품의 상세 설명란입니다.
-            </S.ArtDetailScript>
-          ) : (
-            <>
-              <CommentRateAverage />
-              <CommentWritePage />
-              <CommentListPage />
-            </>
-          )}
-        </S.LowerWrapper>
       </S.Container>
     </>
   );

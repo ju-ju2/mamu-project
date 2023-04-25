@@ -8,6 +8,9 @@ export const Container = styled.div`
   justify-content: flex-start;
   align-items: center;
   margin-top: 20px;
+  @media (max-width: 768px) {
+    width: 92%;
+  }
 `;
 export const ReviewWrapper = styled.div`
   width: 100%;

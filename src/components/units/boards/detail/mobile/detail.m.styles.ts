@@ -83,46 +83,6 @@ export const Price = styled.div`
   color: #222222;
 `;
 
-export const LowerWrapper = styled.div`
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  margin: 30px 0 110px 0;
-  background-color: yellow;
-`;
-export const PickInfoWrapper = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-`;
-export const PickInfoTitle = styled.div`
-  width: 100px;
-  text-align: center;
-  font-weight: 700;
-  padding: 0 1rem;
-  position: relative;
-  margin-bottom: 10px;
-`;
-export const BorderWrapper = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  margin-bottom: 15px;
-`;
-export const PickBorder = styled.div`
-  width: 100px;
-  border-bottom: 2px solid #222222;
-`;
-export const Border = styled.div`
-  width: calc(100% - 200px);
-  border-bottom: 2px solid #d9d9d9;
-`;
-
 export const BuyButton = styled.button`
   width: 88%;
   height: 55px;
