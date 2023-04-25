@@ -28,7 +28,7 @@ export default function Header() {
   const [isMobile, setIsMobile] = useState(false);
 
   // SSR 문제 해결을 위한 로직
-  const screen = useMediaQuery("(min-width: 660px)");
+  const screen = useMediaQuery("(min-width: 768px)");
   useEffect(() => {
     if (screen) {
       setIsMobile(true);

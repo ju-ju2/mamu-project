@@ -6,7 +6,7 @@ export const globalStyles = css`
     box-sizing: border-box;
     font-size: 16px;
     font-family: globalFont;
-    color: #222222;
+    /* color: #222222; */
   }
   body {
     overflow-x: hidden;
