@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useMediaQuery } from "@react-hook/media-query";
 import BoardDetailMobilePage from "../../../src/components/units/boards/detail/mobile/detail.m.container";
+import BoardDetailPCPage from "../../../src/components/units/boards/detail/pc/detail.pc.container";
 
 export default function BoardDetail() {
   // SSR 문제 해결을 위한 로직
@@ -12,5 +13,5 @@ export default function BoardDetail() {
     } else setIsMobile(true);
   }, [screen]);
   // /////////////////////
-  return <>{isMobile && <BoardDetailMobilePage />}</>;
+  return <>{isMobile ? <BoardDetailMobilePage /> : <BoardDetailPCPage />}</>;
 }
