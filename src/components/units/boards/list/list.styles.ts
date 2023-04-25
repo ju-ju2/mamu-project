@@ -40,6 +40,7 @@ export const ContentsWrapper = styled.div`
   flex-direction: column;
   margin-bottom: 2rem;
   margin: 0.7rem;
+  cursor: pointer;
   @media (max-width: 500px) {
     width: 100vw;
   }

@@ -19,5 +19,10 @@ export default function BoardListPage() {
   //   router.push("/boards/new");
   // };
   // return <BoardListPageUI onClickUpload={onClickUpload} isScreen={isScreen} />;
-  return <BoardListPageUI />;
+  const router = useRouter();
+  const temp = "1234";
+  const onClickContents = () => {
+    router.push(`/boards/${temp}`);
+  };
+  return <BoardListPageUI onClickContents={onClickContents} />;
 }

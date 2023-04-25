@@ -1,4 +1,4 @@
-import { Tag } from "antd";
+import { Rate, Tag } from "antd";
 import * as S from "./list.styles";
 import Search from "../../../../commons/search/01.gray";
 // import NarrowButton from "../../../../commons/button/01.orange/narrow";
@@ -6,7 +6,10 @@ import Search from "../../../../commons/search/01.gray";
 //   onClickUpload: () => void;
 //   isScreen: boolean;
 // }
-export default function BoardListPageUI() {
+interface IBoardListPageUIProps {
+  onClickContents: () => void;
+}
+export default function BoardListPageUI(props: IBoardListPageUIProps) {
   return (
     <S.Container>
       <S.HeadWrapper>
@@ -17,7 +20,7 @@ export default function BoardListPageUI() {
       </S.HeadWrapper>
       <S.ContentsContainer>
         {new Array(15).fill(1).map((el, index) => (
-          <S.ContentsWrapper key={index}>
+          <S.ContentsWrapper key={index} onClick={props.onClickContents}>
             <S.Image src="/img/shoneyArt.png" />
             <S.TitleWrapper>
               <S.Title>Blue Man</S.Title>
