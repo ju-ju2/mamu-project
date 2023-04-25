@@ -100,7 +100,8 @@ export const PickInfoWrapper = styled.div`
   align-items: center;
 `;
 export const PickInfoTitle = styled.div`
-  width: 30%;
+  width: 100px;
+  text-align: center;
   font-weight: 700;
   padding: 0 1rem;
   position: relative;
@@ -110,14 +111,15 @@ export const BorderWrapper = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
   margin-bottom: 15px;
 `;
 export const PickBorder = styled.div`
-  width: 30%;
+  width: 100px;
   border-bottom: 2px solid #222222;
 `;
 export const Border = styled.div`
-  width: 40%;
+  width: calc(100% - 200px);
   border-bottom: 2px solid #d9d9d9;
 `;
 

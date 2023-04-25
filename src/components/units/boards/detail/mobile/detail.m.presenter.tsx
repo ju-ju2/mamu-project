@@ -33,7 +33,6 @@ export default function BoardDetailMobilePageUI() {
         <S.HeaderBox />
         <S.UpperWrapper>
           <S.MainImage src="/img/shoneyArt.png" />
-
           <S.InfoWrapper>
             <S.ArtTitle>Blue Man</S.ArtTitle>
             <S.Artist>@shoney</S.Artist>
